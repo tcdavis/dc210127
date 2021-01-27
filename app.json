@@ -1,0 +1,12 @@
+{
+  "name": "dc210127",
+  "displayName": "dc210127",
+  "expo": {
+    "name": "dc210127",
+    "slug": "dc210127",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
