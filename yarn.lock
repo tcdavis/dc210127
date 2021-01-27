@@ -3505,6 +3505,23 @@ expo-constants@~9.3.0, expo-constants@~9.3.3:
     fbjs "1.0.0"
     uuid "^3.3.2"
 
+expo-dev-launcher@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/expo-dev-launcher/-/expo-dev-launcher-0.1.3.tgz#a51a5105eb831927851c0e4fd475973ebdfff13d"
+  integrity sha512-QH0BsUIVv7hksXjBomLtbVCHQi2FL6RRq1OBz+49AxDmf+NlwvKqL+yjWqiqPGQAk4qlCv7fEL+LZU+1zEfRpw==
+
+expo-dev-menu-interface@0.1.1, expo-dev-menu-interface@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/expo-dev-menu-interface/-/expo-dev-menu-interface-0.1.1.tgz#2d3a32a9831e2bfb7b1b801aac74274ccc1755b5"
+  integrity sha512-Ba/scFQZjaJcO5LQEO+1+2Qp5ZOAellrAPvYtPYrnS1TKUP5bwOTON/rt5QJNiZWzSFLqw7i2nQyn2FuN+uRkw==
+
+expo-dev-menu@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/expo-dev-menu/-/expo-dev-menu-0.2.2.tgz#6163fb572bca3cec815af92c5414717128ad0bdd"
+  integrity sha512-S08O2Dn6gu5m+TJegpBHuX9BCe4FjYN5+IKtyJO57/n5M3eshDQnqU1COehaigwHldp/kLiYwhpEJ4RyNdwBqw==
+  dependencies:
+    expo-dev-menu-interface "0.1.1"
+
 expo-error-recovery@~1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/expo-error-recovery/-/expo-error-recovery-1.4.0.tgz#2a05c21b056fb7d68af2fc30032858d19747302a"
