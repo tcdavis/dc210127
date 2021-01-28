@@ -11,6 +11,9 @@
 #import <EXSplashScreen/EXSplashScreenService.h>
 #import <UMCore/UMModuleRegistryProvider.h>
 
+#define EX_DEV_LAUNCHER_ENABLED 1
+#define EX_DEV_MENU_ENABLED 1
+
 #if defined(EX_DEV_MENU_ENABLED)
 @import EXDevMenu;
 #endif
