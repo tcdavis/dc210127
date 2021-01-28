@@ -2,7 +2,8 @@
   "builds": {
     "ios": {
       "release": {
-        "workflow": "generic"
+        "workflow": "generic",
+        "distribution": "internal"
       }
     }
   }
