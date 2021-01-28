@@ -14,11 +14,11 @@
 #define EX_DEV_LAUNCHER_ENABLED 1
 #define EX_DEV_MENU_ENABLED 1
 
-#if defined(EX_DEV_MENU_ENABLED)
+#ifdef DEBUG
 @import EXDevMenu;
 #endif
  
-#if defined(EX_DEV_LAUNCHER_ENABLED)
+#ifdef DEBUG
 #include <EXDevLauncher/EXDevLauncherController.h>
 #endif
  
@@ -61,7 +61,7 @@ static void InitializeFlipper(UIApplication *application) {
   self.launchOptions = launchOptions;
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   #ifdef DEBUG
-    #if defined(EX_DEV_LAUNCHER_ENABLED)
+    #ifdef DEBUG
       EXDevLauncherController *contoller = [EXDevLauncherController sharedInstance];
       [contoller startWithWindow:self.window delegate:self launchOptions:launchOptions];
     #else
@@ -80,7 +80,7 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (RCTBridge *)initializeReactNativeApp
 {
-#if defined(EX_DEV_LAUNCHER_ENABLED)
+#ifdef DEBUG
     NSDictionary *launchOptions = [EXDevLauncherController.sharedInstance getLaunchOptions];
 #else
     NSDictionary *launchOptions = self.launchOptions;
@@ -89,7 +89,7 @@ static void InitializeFlipper(UIApplication *application) {
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];  
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@"main" initialProperties:nil];
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-#if defined(EX_DEV_MENU_ENABLED)
+#ifdef DEBUG
   [DevMenuManager configureWithBridge:bridge];
 #endif
  
@@ -111,7 +111,7 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
 #ifdef DEBUG
-  #if defined(EX_DEV_LAUNCHER_ENABLED)
+  #ifdef DEBUG
     return [[EXDevLauncherController sharedInstance] sourceUrl];
   #else
     return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
@@ -129,7 +129,7 @@ static void InitializeFlipper(UIApplication *application) {
 
 // Linking API
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-#if defined(EX_DEV_LAUNCHER_ENABLED)
+#ifdef DEBUG
   if ([EXDevLauncherController.sharedInstance onDeepLink:url options:options]) {
       return true;
   }
@@ -146,7 +146,7 @@ static void InitializeFlipper(UIApplication *application) {
 @end
 
  
-#if defined(EX_DEV_LAUNCHER_ENABLED)
+#ifdef DEBUG
 @implementation AppDelegate (EXDevLauncherControllerDelegate) 
 - (void)devLauncherController:(EXDevLauncherController *)developmentClientController
           didStartWithSuccess:(BOOL)success
