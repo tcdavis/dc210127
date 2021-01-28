@@ -3515,10 +3515,10 @@ expo-dev-menu-interface@0.1.1, expo-dev-menu-interface@^0.1.1:
   resolved "https://registry.yarnpkg.com/expo-dev-menu-interface/-/expo-dev-menu-interface-0.1.1.tgz#2d3a32a9831e2bfb7b1b801aac74274ccc1755b5"
   integrity sha512-Ba/scFQZjaJcO5LQEO+1+2Qp5ZOAellrAPvYtPYrnS1TKUP5bwOTON/rt5QJNiZWzSFLqw7i2nQyn2FuN+uRkw==
 
-expo-dev-menu@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/expo-dev-menu/-/expo-dev-menu-0.2.1.tgz#fe40242121cf00c541e0e4a7b57de578be8b957b"
-  integrity sha512-umw+n0eva4hWqSsq+4fSz3KQuCKJ1NdFMjY1PxXUlmGshlUuu60AqbZYlDhcbkJIJ1hfMz38CzIhXsROMFEhjA==
+expo-dev-menu@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/expo-dev-menu/-/expo-dev-menu-0.1.2.tgz#06ebfee2b2416337fdcd626e16f778eb4c27de06"
+  integrity sha512-lyVGGXn4gBQ7L4coqG+NTFsHf4qLpR5u39wavOMvSxTLvmNp5hpFkIdxOT9rTw2YVuXES8GNaYW9DIzip+v17w==
   dependencies:
     expo-dev-menu-interface "0.1.1"
 
